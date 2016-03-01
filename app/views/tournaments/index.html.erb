@@ -1,0 +1,41 @@
+<%= content_for :page_title, 'GolfTouro - Tournament List' %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tournaments</h1>
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Course</th>
+      <th>Address</th>
+      <th>Greenfee</th>
+      <th>Tournamentformat</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tournaments.each do |tournament| %>
+      <tr>
+        <td><%= tournament.name %></td>
+        <td><%= tournament.date %></td>
+        <td><%= tournament.course %></td>
+        <td><%= tournament.address %></td>
+        <td><%= tournament.greenFee %></td>
+        <td><%= tournament.tournamentFormat %></td>
+        <td><%= tournament.description %></td>
+        <td><%= link_to 'Show', tournament %></td>
+        <td><%= semantic_icon('edit') %><%= link_to 'Edit', edit_tournament_path(tournament) %></td>
+        <td><%= semantic_icon('erase') %><%= link_to 'Destroy', tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= semantic_icon('add') %> <%= link_to 'New Tournament', new_tournament_path %>

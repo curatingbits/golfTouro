@@ -1,0 +1,49 @@
+
+<%= form_for @tournament,  :html => {:class => 'ui form'} do |f| %>
+  <% if @tournament.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tournament.errors.count, "error") %> prohibited this tournament from being saved:</h2>
+
+      <ul>
+      <% @tournament.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+ 
+    <%= f.label :date %><br>
+   
+    <%= f.datetime_select :date %>
+
+  </div>
+  <div class="field">
+    <%= f.label :course %><br>
+    <%= f.text_field :course %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :greenFee %><br>
+    <%= f.text_field :greenFee %>
+  </div>
+  <div class="field">
+    <%= f.label :tournamentFormat %><br>
+    <%= f.text_field :tournamentFormat %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="ui submit">
+    <%= f.button :submit%>
+  </div>
+<% end %>

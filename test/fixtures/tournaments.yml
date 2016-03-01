@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2016-02-29 14:50:40
+  course: MyString
+  address: MyString
+  greenFee: MyString
+  tournamentFormat: MyString
+  description: MyText
+
+two:
+  name: MyString
+  date: 2016-02-29 14:50:40
+  course: MyString
+  address: MyString
+  greenFee: MyString
+  tournamentFormat: MyString
+  description: MyText

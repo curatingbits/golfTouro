@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tournament.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @tournament.date %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @tournament.course %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @tournament.address %>
+</p>
+
+<p>
+  <strong>Greenfee:</strong>
+  <%= @tournament.greenFee %>
+</p>
+
+<p>
+  <strong>Tournamentformat:</strong>
+  <%= @tournament.tournamentFormat %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tournament.description %>
+</p>
+
+<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+<%= link_to 'Back', tournaments_path %>

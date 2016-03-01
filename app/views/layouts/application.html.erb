@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title><%= yield(:page_title) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= semantic_flash %>
+
+<div class="ui top fixed menu">
+  <div class="header item">
+    So6ix Tour
+  </div>
+  <a class="item" href="/rules">
+    Rules
+  </a>
+  <a class="item" href="/tournaments">
+    Tournaments
+  </a>
+  <a class="item">
+    Locations
+  </a>
+</div>
+
+
+<div class="ui grid fluid container">
+
+	<div class="sixteen wide column">
+		<%= yield %>
+	</div>
+
+</div>
+</body>
+</html>
