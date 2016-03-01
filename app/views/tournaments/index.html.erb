@@ -22,7 +22,7 @@
     <% @tournaments.each do |tournament| %>
       <tr>
         <td><%= tournament.name %></td>
-        <td><%= tournament.date %></td>
+        <td><%= tournament.date.to_formatted_s(:long)  %></td>
         <td><%= tournament.course %></td>
         <td><%= tournament.address %></td>
         <td><%= tournament.greenFee %></td>
